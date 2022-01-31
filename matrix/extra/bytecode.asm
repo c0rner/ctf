@@ -1,6 +1,4 @@
-; picoMini by redpwn 2021 - MATRIX 500 points
-; -------------------------------------------
-; Byte code disassembly and annotations
+; Disassembled and annotated MATRIX bytecode
 ; https://github.com/c0rner
 
 ; ====================================== PROGRAM START
