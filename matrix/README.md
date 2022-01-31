@@ -31,20 +31,20 @@ MATRIX challenge exists in a virtual 16bit cpu with a limited instruction set.  
 </details>
 <details><summary>Hint 3</summary>
   
+## MATRIX cpu implementation
+This repo contains an implementation of MATRIX cpu in Rust.  The implementation can do disassembly and single step bytecode.
+</details>
+<details><summary>Hint 4</summary>
+  
 ## MATRIX bytecode disassembly
 Disassembled and annotated bytecode is available [here](extra/bytecode.asm)
 
 </details>
-<details><summary>Hint 4</summary>
+<details><summary>Hint 5</summary>
   
 ## How does it work?
 Key to solving the challenge requires you to understand how the variables `a`, `b` and `c` as seen in bytecode disassembly interact and modify code flow.
 
-</details>
-<details><summary>Hint 5</summary>
-  
-## MATRIX cpu implementation
-This repo contains an implementation of MATRIX in Rust.  The implementation can do disassembly and single step bytecode.
 </details>
 <details><summary>Hint 6</summary>
   
