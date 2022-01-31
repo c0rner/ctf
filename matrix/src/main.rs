@@ -1,10 +1,5 @@
-//! picoMini by redpwn 2021 - MATRIX 500 points
-//! -------------------------------------------
 //! MATRIX cpu implementation
 //! https://github.com/c0rner
-//!
-//! Challenge author: Asphyxia
-//! Category: Reverse engineering
 
 use std::env;
 use std::vec;
