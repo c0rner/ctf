@@ -1,0 +1,7 @@
+Below is the path I used to solve the challenge. I did however make one slight
+modification that is obvious if you understand the bytecode and cpu.
+
+In other words, you cannot win using this path verbatim. Sorry :/
+
+
+rrrrrlrlrlrllddddddlddrrddrrrrdddrruuuruuuuuuurrddddddddlddrd
