@@ -12,7 +12,12 @@ picoCTF{y0uv3_3sc4p3d_th3_m4ze...f0r_n0w-***REDACTED***}
 ___!!! CAUTION, This repository contains tooling I built while solving the MATRIX challenge.  If you wish to solve this entirely on your own STOP reading now !!!___
 
 This is __not__ a writeup.  You will not find the flag here, however the contents will nudge you in the right direction.
-Personally I found this challenge fun and I recommend you give it a try without any hints.  It's worth it!
+Personally I found this challenge fun and I recommend you give it a try without any hints.
+
+- Competition: picoMini by redpwn (2021)
+- Challenge: [MATRIX](https://play.picoctf.org/practice/challenge/221)
+- Author: Asphyxia
+- Points: 500
 
 ## Hints
 Below you will find hints that will help you solve this should you be stuck.
@@ -43,7 +48,7 @@ Disassembled and annotated bytecode is available [here](extra/bytecode.asm)
 <details><summary>Hint 5</summary>
   
 ## How does it work?
-Key to solving the challenge requires you to understand how the variables `a`, `b` and `c` as seen in bytecode disassembly interact and modify code flow.
+Key to solving the challenge requires you to understand how the variables `a`, `b` and `c`, as seen in bytecode disassembly, interact with and modify code flow.
 
 </details>
 <details><summary>Hint 6</summary>
