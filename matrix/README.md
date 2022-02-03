@@ -31,7 +31,7 @@ Directions are given using u (up), d (down), l (left), and r (right).
 <details><summary>Hint 2</summary>
   
 ## MATRIX cpu
-MATRIX challenge exists in a virtual 16bit cpu with a limited instruction set.  It has a stack and separate FIFO memory storage. 
+MATRIX challenge exists in a virtual 16bit cpu with a limited instruction set.  It has a stack and separate LIFO memory storage. 
 
 </details>
 <details><summary>Hint 3</summary>
