@@ -2,7 +2,7 @@
 ; https://github.com/c0rner
 
 ; ====================================== PROGRAM START
-0000  push 0x0075 	; INIT VARS
+0000  push 0x0075	; INIT VARS
 0003  push 0x00 ()
 0005  push 0x0a ()
 0007  push 0x3f (?)
@@ -58,7 +58,7 @@
 006b  push 0x6c (l)
 006d  push 0x65 (e)
 006f  push 0x57 (W)
-0071  push 0x013b 	; PRINT
+0071  push 0x013b	; PRINT
 0074  jump
 ; ====================================== INIT VARS
 0075  push 0x01 ()  a
@@ -70,96 +70,96 @@
 007d  push 0x75 (u)
 007f  sub
 0080  push 0x00a0
-0083  jumpz 		; UP
+0083  jumpz			; UP
 0084  copy
 0085  push 0x64 (d)
 0087  sub
 0088  push 0x00aa
-008b  jumpz 		; DOWN
+008b  jumpz			; DOWN
 008c  copy
 008d  push 0x6c (l)
 008f  sub
 0090  push 0x00b4
-0093  jumpz 		; LEFT
+0093  jumpz			; LEFT
 0094  copy
 0095  push 0x72 (r)
 0097  sub
 0098  push 0x00c0
-009b  jumpz 		; RIGHT
-009c  push 0x00fb 	; DEATH
+009b  jumpz			; RIGHT
+009c  push 0x00fb	; DEATH
 009f  jump
 ; ====================================== UP: DEC B
-00a0  pop 		; pop input
-00a1  store 		; store c
+00a0  pop			; pop input
+00a1  store			; store c
 00a2  push 0x01 ()
-00a4  sub 		; dec b
-00a5  fetch 		; fetch c
+00a4  sub			; dec b
+00a5  fetch			; fetch c
 00a6  push 0x00cc
 00a9  jump
 ; ====================================== DOWN: INC B
 00aa  pop
-00ab  store 		; store c
+00ab  store			; store c
 00ac  push 0x01
-00ae  add 		; inc b
-00af  fetch 		; fetch c
+00ae  add			; inc b
+00af  fetch			; fetch c
 00b0  push 0x00cc
 00b3  jump
 ; ====================================== LEFT: DEC A
 00b4  pop 
-00b5  store 		; store c
-00b6  store 		; store b
+00b5  store			; store c
+00b6  store			; store b
 00b7  push 0x01 ()
-00b9  sub 		; dec a
-00ba  fetch 		; fetch b
-00bb  fetch 		; fetch c
+00b9  sub			; dec a
+00ba  fetch			; fetch b
+00bb  fetch			; fetch c
 00bc  push 0x00cc
 00bf  jump
 ; ====================================== RIGHT: INC A
 00c0  pop
-00c1  store 		; store c
-00c2  store 		; store b
+00c1  store			; store c
+00c2  store			; store b
 00c3  push 0x01
-00c5  add 		; inc a
-00c6  fetch 		; fetch b
-00c7  fetch 		; fetch c
+00c5  add			; inc a
+00c6  fetch			; fetch b
+00c7  fetch			; fetch c
 00c8  push 0x00cc
 00cb  jump
 ; ====================================== MAIN LOOP CONT.
-00cc  store 		; store c
-00cd  store 		; store b
+00cc  store			; store c
+00cd  store			; store b
 00ce  push 0x00da
-00d1  fetch 		; fetch b
-00d2  copy 		; copy b
-00d3  store 		; store b
-00d4  push 0x10         ; push 0x10
+00d1  fetch			; fetch b
+00d2  copy			; copy b
+00d3  store			; store b
+00d4  push 0x10		; push 0x10
 00d6  push 0x0147
-00d9  jump 		; CALL MUL(0x10, b)
+00d9  jump			; CALL MUL(0x10, b)
 00da  swap 		
 00db  copy
 00dc  store
-00dd  add 		; (0x10 * b), a
-00de  fetch 		; a
+00dd  add			; (0x10 * b), a
+00de  fetch			; a
 00df  swap
-00e0  fetch 		; b
+00e0  fetch			; b
 00e1  swap
-00e2  fetch 		; c
+00e2  fetch			; c
 00e3  swap
-00e4  store 		; result (b * 0x10 + a)
+00e4  store			; result (b * 0x10 + a)
 00e5  push 0x00ef
-00e8  fetch 		; result
+00e8  fetch			; result
 00e9  push 0x02
 00eb  push 0x0161
-00ee  jump 		; CALL SHL(result, 2)
-00ef  push 0x007b 	; MAIN LOOP
+00ee  jump			; CALL SHL(result, 2)
+00ef  push 0x007b	; MAIN LOOP
 00f2  swap
-00f3  push 0x0174 	; JUMP TABLE
-00f6  add 		; table+result
-00f7  jump 		; result
+00f3  push 0x0174	; JUMP TABLE
+00f6  add			; table+result
+00f7  jump			; result
 ; ====================================== WIN
 00f8  push 0x00
 00fa  break
 ; ====================================== DEATH
-00fb  push 0x0138 	; LOSE
+00fb  push 0x0138	; LOSE
 00fe  push 0x00 ()
 0100  push 0x0a ()
 0102  push 0x2e (.)
@@ -187,7 +187,7 @@
 012e  push 0x75 (u)
 0130  push 0x6f (o)
 0132  push 0x59 (Y)
-0134  push 0x013b 	; PRINT
+0134  push 0x013b	; PRINT
 0137  jump
 ; ====================================== LOSE
 0138  push 0x01
@@ -203,38 +203,38 @@
 0146  jump
 ; ======================================  MUL ARG1, ARG2
 0147  push 0x00
-0149  store 		; 0
-014a  store 		; ARG1 (0x10)
-014b  copy 		; copy ARG2 (b)
+0149  store			; 0
+014a  store			; ARG1 (0x10)
+014b  copy			; copy ARG2 (b)
 014c  push 0x015b
-014f  jumpz 		; b == 0
+014f  jumpz			; b == 0
 0150  push 0x01
-0152  sub 		; dec b		
-0153  fetch 		; fetch ARG1
+0152  sub			; dec b		
+0153  fetch			; fetch ARG1
 0154  copy
-0155  fetch 		; fetch 0
+0155  fetch			; fetch 0
 0156  add
 0157  push 0x0149
 015a  jump
-015b  pop 		; pop ARG2 copy
-015c  fetch 		; fetch ARG1
-015d  pop 		; pop ARG1
-015e  fetch 		; fetch RESULT
+015b  pop			; pop ARG2 copy
+015c  fetch			; fetch ARG1
+015d  pop			; pop ARG1
+015e  fetch			; fetch RESULT
 015f  swap
 0160  jump 		return
 ; ====================================== SHL ARG1, ARG2
-0161  copy 		; copy ARG1
-0162  push 0x0171 	; return
-0165  jumpz 		; ARG1 == 0
+0161  copy			; copy ARG1
+0162  push 0x0171	; return
+0165  jumpz			; ARG1 == 0
 0166  push 0x01
-0168  sub 		; dec ARG1
-0169  store 		; ARG1
-016a  copy 		; copy ARG2
-016b  add 		; ARG2 + ARG2
-016c  fetch 		; ARG1
-016d  push 0x0161 	; SHL loop
+0168  sub			; dec ARG1
+0169  store			; ARG1
+016a  copy			; copy ARG2
+016b  add			; ARG2 + ARG2
+016c  fetch			; ARG1
+016d  push 0x0161	; SHL loop
 0170  jump
-0171  pop 		; pop ARG1
+0171  pop			; pop ARG1
 0172  swap
 0173  jump
 ; ====================================== JUMP TABLE
@@ -967,16 +967,16 @@
 ; ====================================== DEC C
 0574  store
 0575  copy
-0576  push 0x00fb 	; DEATH
-0579  jumpz 		; c == 0
+0576  push 0x00fb	; DEATH
+0579  jumpz			; c == 0
 057a  push 0x01
-057c  sub 		; dec c
+057c  sub			; dec c
 057d  fetch
 057e  jump
 ; ====================================== INC C
 057f  store
 0580  push 0x01
-0582  add 		; inc c
+0582  add			; inc c
 0583  fetch
 0584  jump
 ; ====================================== SUCCESS
@@ -1016,7 +1016,7 @@
 05c4  push 0x6e (n)
 05c6  push 0x6f (o)
 05c8  push 0x43 (C)
-05ca  push 0x013b 	; PRINT
+05ca  push 0x013b	; PRINT
 05cd  jump
-05ce  push 0x00f8 	; WIN
+05ce  push 0x00f8	; WIN
 05d1  jump
